@@ -7,24 +7,24 @@ y la despliega.
 
 ## Endpoints
 
-| Método | Ruta | Respuesta |
-|---|---|---|
-| GET | `/health` | `{"estado": "ok"}` si la API está viva |
-| GET | `/version` | Versión desplegada y ambiente (`APP_VERSION`, `APP_ENV`) |
-| GET | `/tareas` | Lista de tareas |
-| GET | `/tareas/<id>` | Una tarea, o 404 |
-| POST | `/tareas` | Crea una tarea con `{"titulo": "..."}`; 201, o 400 si el título no es válido |
+| Método | Ruta           | Respuesta                                                                    |
+| ------ | -------------- | ---------------------------------------------------------------------------- |
+| GET    | `/health`      | `{"estado": "ok"}` si la API está viva                                       |
+| GET    | `/version`     | Versión desplegada y ambiente (`APP_VERSION`, `APP_ENV`)                     |
+| GET    | `/tareas`      | Lista de tareas                                                              |
+| GET    | `/tareas/<id>` | Una tarea, o 404                                                             |
+| POST   | `/tareas`      | Crea una tarea con `{"titulo": "..."}`; 201, o 400 si el título no es válido |
 
 Si la variable `API_TOKEN` tiene valor, `POST /tareas` exige el encabezado
 `Authorization: Bearer <token>`. Las lecturas no lo exigen.
 
 ## Configuración
 
-| Variable | Para qué sirve | Valor por defecto |
-|---|---|---|
-| `APP_ENV` | Nombre del ambiente (desarrollo, staging, produccion) | `desarrollo` |
-| `APP_VERSION` | Versión que reporta `/version` | `dev` |
-| `API_TOKEN` | Token que protege `POST /tareas` | sin valor (no se exige) |
+| Variable      | Para qué sirve                                        | Valor por defecto       |
+| ------------- | ----------------------------------------------------- | ----------------------- |
+| `APP_ENV`     | Nombre del ambiente (desarrollo, staging, produccion) | `desarrollo`            |
+| `APP_VERSION` | Versión que reporta `/version`                        | `dev`                   |
+| `API_TOKEN`   | Token que protege `POST /tareas`                      | sin valor (no se exige) |
 
 ## Correr en local
 
@@ -64,3 +64,5 @@ docs/           documentación del flujo de entrega
 requirements.txt       dependencias de la aplicación, con versión fija
 requirements-dev.txt   dependencias para desarrollar y probar
 ```
+
+holas
